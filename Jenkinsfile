@@ -2,24 +2,18 @@ pipeline {
   agent any
   stages {
     stage('checkout') {
-      steps {
-        git(url: 'https://github.com/annajel/helloworld.git', branch: 'master')
-      }
-    }
-
-    stage('compile, test, package') {
-      withMaven(maven: 'maven'){
-        sh label: '', script: 'mvn clean package'
-      }
-    }
-
-    stage('archival') {
-      agent any
-      steps {
-        archiveArtifacts 'targer/*.war'
-      }
-    }
-
+        git 'https://github.com/annajel/helloworld.git'
+        }
+        
+        stage('compile, test, package') {
+            withMaven(maven: 'maven'){
+            sh label: '', script: 'mvn clean package'
+            }
+        }
+        
+        stage('archival') {
+            archiveArtifacts 'target/*.war'
+        }
   }
   environment {
     test = '1'
