@@ -8,10 +8,10 @@ pipeline {
     }
 
     stage('compile, test, package') {
-            withMaven(maven: 'maven'){
-            sh label: '', script: 'mvn clean package'
-            }
-        }
+      withMaven(maven: 'maven'){
+        sh label: '', script: 'mvn clean package'
+      }
+    }
 
     stage('archival') {
       agent any
