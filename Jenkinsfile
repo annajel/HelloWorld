@@ -6,7 +6,7 @@ node('worker1') {
         git 'https://github.com/annajel/helloworld.git'
         }
         
-        stage('compile, test, package') {
+        stage('compile, test, package, deploy') {
             withMaven(maven: 'maven'){
             sh label: '', script: 'mvn clean package jelastic:deploy'
             }
