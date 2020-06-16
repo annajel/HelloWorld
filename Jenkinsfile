@@ -27,6 +27,7 @@ node('worker1') {
 
 def notify(status){
     emailext (
+      from: "jenkins@cluster.com",
       to: "ash@mailhog.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
