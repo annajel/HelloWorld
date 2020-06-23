@@ -1,4 +1,4 @@
-node('worker1') {
+node {
     
     notify('Started')
     try {
