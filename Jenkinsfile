@@ -1,4 +1,4 @@
-node ('node133656'){
+node (label: 'latest'){
     
     notify('Started')
     try {
