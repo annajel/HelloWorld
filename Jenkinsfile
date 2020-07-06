@@ -1,4 +1,4 @@
-node {
+node ('w-10'){
     
     notify('Started')
     try {
