@@ -1,7 +1,7 @@
 node {
     
     parameters {
-        string(name: 'TOKEN', defaultValue: 'f2e4c6b2917f453983d77912927a192e87174dfe', description: 'Extented Access Token from platform')
+        string(name: 'TOKEN', defaultValue: '02e8889f74d245568f1ba8e3c1f15520852dcb6b', description: 'Extented Access Token from platform')
         string(name: 'CONTEXT', defaultValue: 'blueOcean', description: 'Deploy to...')
         string(name: 'TARGET_ENV', defaultValue: 'env-8327338', description: 'Where to deploy?')
         string(name: 'JELASTIC_API_ENDPOINT', defaultValue: 'app.madrid.central.jelastic.team', description: 'Platform for testing')               
