@@ -1,4 +1,4 @@
-node {
+node ('node133848'){
     
     parameters {
         string(name: 'TOKEN', defaultValue: '02e8889f74d245568f1ba8e3c1f15520852dcb6b', description: 'Extented Access Token from platform')
