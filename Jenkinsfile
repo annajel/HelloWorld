@@ -1,4 +1,4 @@
-node ('w-extra'){
+node {
     
     notify('Started')
     try {
