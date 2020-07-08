@@ -1,4 +1,4 @@
-node ('node133848'){
+node {
     
     parameters {
         string(name: 'TOKEN', defaultValue: '02e8889f74d245568f1ba8e3c1f15520852dcb6b', description: 'Extented Access Token from platform')
@@ -11,6 +11,12 @@ node ('node133848'){
     try {
         stage('checkout') {
         git 'https://github.com/annajel/helloworld.git'
+        }
+        
+        stage('recheck project parameters') {
+            withMaven(maven: 'maven'){
+            sh label: '', script: 'mvn -X clean'
+            }
         }
         
         stage('compile, test, package, deploy') {
